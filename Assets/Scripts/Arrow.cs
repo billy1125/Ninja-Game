@@ -18,6 +18,8 @@ public class Arrow : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        //GetComponent<AudioSource>().Play();
         Destroy(gameObject);
+        //GetComponent<AudioSource>().Play();
     }
 }
