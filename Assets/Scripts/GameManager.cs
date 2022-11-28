@@ -9,6 +9,14 @@ public class GameManager : MonoBehaviour
     float span = 1.0f;             //丁丁筳
     float delta = 0;               //瞷竒仓縩丁
     public GameObject hpGauge;
+    public Text ScoreText;
+    int Score = 0;                 // だ计
+
+    void Start()
+    {
+        ScoreText.text = $"だ计{Score}";
+        //ScoreText.text = "だ计" + Score.ToString();
+    }
 
     void Update()
     {
@@ -25,5 +33,12 @@ public class GameManager : MonoBehaviour
     public void DecreaseHP()
     {
         hpGauge.GetComponent<Image>().fillAmount -= 0.1f;
+    }
+
+    // だよ猭
+    public void IncreaseScore()
+    {
+        Score += 100;
+        ScoreText.text = $"だ计{Score}";
     }
 }
